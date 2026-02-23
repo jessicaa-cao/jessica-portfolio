@@ -9,7 +9,7 @@ export default function About() {
         <div className="about-paragraphs">
           <p className="about-text">
             Hi! I'm Jessica, a <span className="blue-text">Georgetown</span> student studying Science, Technology & International Affairs 
-            with a minor in Computer Science. With experience across product and technology governance, I bring creativity and clarity around incentives, tradeoffs, and long-term impact to any product team. I focus on designing intuitive systems that work for users and hold up in the real world.
+            with a minor in Computer Science. With experience across product and technology governance, I bring creativity and clarity around incentives, design tradeoffs, and long-term impact to any product team. 
           </p>
           
           <p className="about-text">
