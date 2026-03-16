@@ -13,7 +13,7 @@ export default function About() {
           </p>
           
           <p className="about-text">
-            <strong>Currently:</strong> Currently, I’m a Product Management Intern at<strong>Garde-Robe,</strong> where I improve growth and onboarding UX for a social shopping platform. I also serve as a Legislative Intern in the <strong>U.S. House of Representatives</strong> researching AI policy, intellectual property, and data privacy, and as a Research Assistant at the <strong>Massive Data Institute</strong> evaluating privacy and security risks in K-12 AI tools as part of a $20M grant initiative.
+            <strong>Currently:</strong> Currently, I’m a Product Management Intern at <strong>Garde-Robe,</strong> where I improve growth and onboarding UX for a social shopping platform. I also serve as a Legislative Intern in the <strong>U.S. House of Representatives</strong> researching AI policy, intellectual property, and data privacy, and as a Research Assistant at the <strong>Massive Data Institute</strong> evaluating privacy and security risks in K-12 AI tools as part of a $20M grant initiative.
           </p>
           
           <p className="about-text">
