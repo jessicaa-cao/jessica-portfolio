@@ -10,18 +10,10 @@ export default function Work() {
       logo: "/logos/garderobe.png",
       period: "Aug '25 – Present",
       position: "Product Manager Intern",
-      focus: "Consumer Growth & Onboarding"
+      focus: "Consumer Growth & Onboarding UX"
     },
     {
       id: 2,
-      company: "Toast",
-      logo: "/logos/toast.jpg",
-      period: "Jul '25 – Dec '25",
-      position: "Product Management Consultant",
-      focus: "UX Diagnostics & Competitive Strategy"
-    },
-    {
-      id: 3,
       company: "U.S. House of Representatives",
       logo: "/logos/house.png",
       period: "Jan '26 – Present",
@@ -29,12 +21,20 @@ export default function Work() {
       focus: "AI Policy & Technology Governance"
     },
     {
-      id: 4,
+      id: 3,
       company: "Massive Data Institute",
       logo: "/logos/mdi.jpg",
       period: "Jan '26 – Present",
       position: "Research Assistant",
       focus: "Prof. Amy O'Hara, AI Risk Evaluation & Education Tech"
+    },
+    {
+      id: 4,
+      company: "Toast",
+      logo: "/logos/toast.jpg",
+      period: "Jul '25 – Dec '25",
+      position: "Product Management Consultant",
+      focus: "UX Diagnostics & Competitive Strategy"
     },
     {
       id: 5,

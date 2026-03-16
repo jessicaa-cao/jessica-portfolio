@@ -9,11 +9,11 @@ export default function About() {
         <div className="about-paragraphs">
           <p className="about-text">
             Hi! I'm Jessica, a <span className="blue-text">Georgetown</span> student studying Science, Technology & International Affairs 
-            with a minor in Computer Science. With experience across product and technology governance, I bring creativity and clarity around incentives, design tradeoffs, and long-term impact to any product team. 
+            with a minor in Computer Science. With experience across product, security, and technology governance, I bring creativity and clarity around incentives, design decisions, and long-term impact to any team. 
           </p>
           
           <p className="about-text">
-            <strong>Currently:</strong> I'm a Product Management Intern at <strong>Garde-Robe</strong>, where I'm designing a Beli-inspired referral growth system that increases network effects by unlocking app features through friend-invite milestones. I'm focused on activation, retention loops, and turning social interactions into measurable growth.
+            <strong>Currently:</strong> Currently, I’m a Product Management Intern at<strong>Garde-Robe,</strong> where I improve growth and onboarding UX for a social shopping platform. I also serve as a Legislative Intern in the <strong>U.S. House of Representatives</strong> researching AI policy, intellectual property, and data privacy, and as a Research Assistant at the <strong>Massive Data Institute</strong> evaluating privacy and security risks in K-12 AI tools as part of a $20M grant initiative.
           </p>
           
           <p className="about-text">
