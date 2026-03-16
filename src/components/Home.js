@@ -187,7 +187,7 @@ export default function Home({ setPage }) {
             <Linkedin size={20} />
           </a>
           <a 
-            href="/Jessica_Cao_PM_Resume.pdf"
+            href="/Portfolio_Resume.pdf"
             target="_blank" 
             rel="noopener noreferrer"
             className="icon-link"
