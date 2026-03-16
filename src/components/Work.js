@@ -38,7 +38,7 @@ export default function Work() {
     },
     {
       id: 5,
-      company: "SFS",
+      company: "Georgetown School of Foreign Service",
       logo: "/logos/sfs.png",
       period: "Mar '25 – Dec '25",
       position: "Web Developer Intern",
