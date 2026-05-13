@@ -8,16 +8,15 @@ export default function About() {
         
         <div className="about-paragraphs">
           <p className="about-text">
-            Hi! I'm Jessica, a <span className="blue-text">Georgetown</span> student studying Science, Technology & International Affairs 
-            with a minor in Computer Science. With experience across product, security, and technology governance, I bring creativity and clarity around incentives, design decisions, and long-term impact to any team. 
+            Hi! I'm Jessica, a <a href="https://sfs.georgetown.edu/" target="_blank" rel="noopener noreferrer" className="blue-link">Georgetown</a> student studying Science, Tech & Int'l Affairs, with a minor in CS. Across my work experiences and personal projects, I've worn whatever hat the moment called for—PM, developer, data analyst, or designer—to move ideas forward.
           </p>
           
           <p className="about-text">
-            <strong>Currently:</strong> Currently, I’m a Product Management Intern at <strong>Garde-Robe,</strong> where I improve growth and onboarding UX for a social shopping platform. I also serve as a Legislative Intern in the <strong>U.S. House of Representatives</strong> researching AI policy, intellectual property, and data privacy, and as a Research Assistant at the <strong>Massive Data Institute</strong> evaluating privacy and security risks in K-12 AI tools as part of a $20M grant initiative.
+            Currently, I'm a PM intern at <a href="https://govskills.io/" target="_blank" rel="noopener noreferrer" className="blue-link">GovSkills</a>, turning student research into product specs for personalized job matching, role eligibility labels, and clearer application timelines. In past roles, I've improved onboarding UX and growth strategy at <a href="https://www.garde-robe.com/" target="_blank" rel="noopener noreferrer" className="blue-link">Garde-Robe</a>, prototyped restaurant discovery features at <a href="https://pos.toasttab.com/" target="_blank" rel="noopener noreferrer" className="blue-link">Toast</a>, and built web/data projects across <a href="https://sfs.georgetown.edu/" target="_blank" rel="noopener noreferrer" className="blue-link">Georgetown SFS</a> and <a href="https://www.einpresswire.com/" target="_blank" rel="noopener noreferrer" className="blue-link">EIN Presswire</a>.
           </p>
           
           <p className="about-text">
-            <strong>Previously:</strong> At <strong>Toast Inc.</strong>, I worked on reducing ordering friction and improving restaurant discovery. I analyzed 12 competing platforms, audited search visibility across four AI ranking systems, and designed a high-fidelity menu-filtering feature now progressing toward pilot launch.
+            Beyond work, you'll find me acting on stage, mountain biking, writing for my book blog, or <a href="https://beliapp.com/" target="_blank" rel="noopener noreferrer" className="blue-link">Beli</a>-hopping every city I visit. I'm driven by curiosity, creativity, and community—and I love constantly learning and building products that bring real value to users.
           </p>
         </div>
       </div>
