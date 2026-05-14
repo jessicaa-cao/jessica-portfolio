@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flowing J -->
+  <path d="M 5 10 Q 5 8, 7 8 Q 8 8, 8 10 L 8 18 Q 8 24, 12 24 Q 15 24, 15 21" 
+        fill="#60a5fa"/>
+  
+  <!-- Water droplet accent on J -->
+  <path d="M 10 5 Q 11 3, 12 5 Q 13 7, 12 8 Q 11 9, 10 8 Q 9 7, 10 5 Z" 
+        fill="#60a5fa"/>
+  
+  <!-- Flowing C -->
+  <path d="M 28 12 Q 24 9, 21 12 Q 19 14, 19 16 Q 19 18, 21 20 Q 24 23, 28 20" 
+        stroke="#60a5fa" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Connecting flow -->
+  <path d="M 14 16 Q 17 15, 20 16" 
+        stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

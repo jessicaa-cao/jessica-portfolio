@@ -230,7 +230,7 @@ body {
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 680px;
 }
 
 @keyframes fadeIn {
@@ -310,6 +310,14 @@ body {
 .about-text strong {
   color: var(--blue);
   font-weight: 500;
+}
+
+.about-text a {
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
 }
 
 /* Projects Page - Compact */
@@ -766,6 +774,15 @@ body {
   font-weight: 500;
   color: var(--text);
   margin-bottom: 0.25rem;
+}
+
+.work-company-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.work-company-link:hover {
+  text-decoration: underline;
 }
 
 .work-dates {

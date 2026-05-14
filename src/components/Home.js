@@ -13,8 +13,8 @@ export default function Home({ setPage }) {
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       size: 8 + Math.random() * 16,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
+      vx: (Math.random() - 0.5) * 1.5, // Increased from 0.5
+      vy: (Math.random() - 0.5) * 1.5, // Increased from 0.5
       wobble: Math.random() * Math.PI * 2,
       wobbleSpeed: 0.02 + Math.random() * 0.03
     }));
@@ -62,13 +62,13 @@ export default function Home({ setPage }) {
             newVy += (dy / distance) * force;
           }
 
-          // Gravity toward center (subtle)
+          // Gravity toward center (stronger)
           const centerX = window.innerWidth / 2;
           const centerY = window.innerHeight / 2;
           const toCenterX = centerX - newX;
           const toCenterY = centerY - newY;
-          newVx += toCenterX * 0.00008;
-          newVy += toCenterY * 0.00008;
+          newVx += toCenterX * 0.0003; // Increased from 0.00008
+          newVy += toCenterY * 0.0003;
 
           // Friction
           newVx *= 0.99;
@@ -187,7 +187,7 @@ export default function Home({ setPage }) {
             <Linkedin size={20} />
           </a>
           <a 
-            href="/Portfolio_Resume.pdf"
+            href="/Jessica_Cao_PM_Resume.pdf"
             target="_blank" 
             rel="noopener noreferrer"
             className="icon-link"

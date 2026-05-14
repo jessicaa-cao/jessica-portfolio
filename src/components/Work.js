@@ -6,43 +6,57 @@ export default function Work() {
   const experiences = [
     {
       id: 1,
-      company: "Garde-Robe",
-      logo: "/logos/garderobe.png",
-      period: "Aug '25 – Present",
+      company: "GovSkills",
+      url: "https://govskills.io/",
+      logo: "/logos/govskills.jpg",
+      period: "Jan '26 – Present",
       position: "Product Manager Intern",
-      focus: "Consumer Growth & Onboarding UX"
+      focus: "User Research & University GTM Strategy"
     },
     {
       id: 2,
-      company: "U.S. House of Representatives",
-      logo: "/logos/house.png",
+      company: "Massive Data Institute",
+      url: "https://mdi.georgetown.edu/",
+      logo: "/logos/mdi.jpg",
       period: "Jan '26 – Present",
-      position: "Legislative Intern",
-      focus: "AI Policy & Technology Governance"
+      position: "Technology Policy Research Assistant",
+      focus: "AI Risk Evaluation & K-12 Ed Tech Privacy"
     },
     {
       id: 3,
-      company: "Massive Data Institute",
-      logo: "/logos/mdi.jpg",
-      period: "Jan '26 – Present",
-      position: "Research Assistant",
-      focus: "Prof. Amy O'Hara, AI Risk Evaluation & Education Tech"
+      company: "Garde-Robe",
+      url: "https://www.garde-robe.com/",
+      logo: "/logos/garderobe.png",
+      period: "Aug '25 – Mar '26",
+      position: "Product Manager Intern",
+      focus: "Consumer Growth & Onboarding"
     },
     {
       id: 4,
       company: "Toast",
+      url: "https://pos.toasttab.com/",
       logo: "/logos/toast.jpg",
       period: "Jul '25 – Dec '25",
-      position: "Product Management Consultant",
+      position: "Product Consultant",
       focus: "UX Diagnostics & Competitive Strategy"
     },
     {
       id: 5,
-      company: "Georgetown School of Foreign Service",
+      company: "SFS",
+      url: "https://sfs.georgetown.edu/",
       logo: "/logos/sfs.png",
       period: "Mar '25 – Dec '25",
       position: "Web Developer Intern",
       focus: "Platform Performance & Information Architecture"
+    },
+    {
+      id: 6,
+      company: "EIN Presswire",
+      url: "https://www.einpresswire.com/",
+      logo: "/logos/ein.jpg",
+      period: "Jan '25 – May '25",
+      position: "Data Analyst Intern",
+      focus: "Sales Analytics & Ad Strategy"
     }
   ];
 
@@ -64,7 +78,16 @@ export default function Work() {
               </div>
               
               <div className="work-info">
-                <h3 className="work-company-name">{exp.company}</h3>
+                <h3 className="work-company-name">
+                  <a
+                    href={exp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-company-link"
+                  >
+                    {exp.company}
+                  </a>
+                </h3>
                 <p className="work-dates">{exp.period}</p>
                 <p className="work-role">{exp.position}</p>
                 <p className={`work-focus ${hovered === exp.id ? 'visible' : ''}`}>
