@@ -6,21 +6,22 @@ export default function Work() {
   const experiences = [
     {
       id: 1,
-      company: "GovSkills",
-      url: "https://govskills.io/",
-      logo: "/logos/govskills.jpg",
-      period: "Jan '26 – Present",
-      position: "Product Manager Intern",
-      focus: "User Research & University GTM Strategy"
-    },
-    {
-      id: 2,
       company: "Massive Data Institute",
       url: "https://mdi.georgetown.edu/",
       logo: "/logos/mdi.jpg",
-      period: "Jan '26 – Present",
+      period: "Apr. '26 – Present",
       position: "Technology Policy Research Assistant",
       focus: "AI Risk Evaluation & K-12 Ed Tech Privacy"
+    },
+    {
+            id: 2,
+      company: "GovSkills",
+      url: "https://govskills.io/",
+      logo: "/logos/govskills.jpg",
+      period: "Jan '26 – May '26",
+      position: "Product Consultant",
+      focus: "User Research & University GTM Strategy"
+      
     },
     {
       id: 3,
