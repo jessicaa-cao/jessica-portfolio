@@ -10,8 +10,8 @@ export default function Work() {
       url: "https://mdi.georgetown.edu/",
       logo: "/logos/mdi.jpg",
       period: "Apr. '26 – Present",
-      position: "Technology Policy Research Assistant",
-      focus: "AI Risk Evaluation & K-12 Ed Tech Privacy"
+      position: "Product & Data Policy Researcher",
+      focus: "AI Products Risk Evaluation & K-12 Ed Tech Privacy"
     },
     {
             id: 2,
