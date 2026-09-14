@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './components/Home';
 import About from './components/About';
 import Work from './components/Work';
@@ -48,6 +49,7 @@ function App() {
       <main className={currentPage === 'home' ? 'main-home' : 'main-page'}>
         {pages[currentPage]}
       </main>
+      <Analytics />
     </div>
   );
 }
