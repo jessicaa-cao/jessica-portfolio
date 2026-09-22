@@ -90,6 +90,7 @@ export default function Projects() {
       ],
       reflection: "This project showed me that changing behavior matters more than information. Students already had menus and nutrition data but still skipped meals. The solution wasn't more data; it was removing the decision. I learned to design for habit formation by reducing cognitive load and reinforcing routines through feedback loops."
     },
+
     garderobe: {
       title: "Garde-Robe",
       subtitle: "Social Fashion Platform",
@@ -151,6 +152,7 @@ export default function Projects() {
       ],
       reflection: "This project reinforced that product growth in startups does not always come from adding new features. It comes from clarifying the value and purpose of existing features for users and targeting long-term utility. I learned to turn qualitative insights into prioritized roadmap decisions, design intentional network effects, and align product depth with scalable growth metrics."
     },
+
     toast: {
       title: "Toast, Inc.",
       subtitle: "Reducing Ordering Friction & Strengthening Competitive Positioning",
@@ -213,6 +215,14 @@ export default function Projects() {
         "Developed SEO optimization playbook for AI discovery"
       ],
       reflection: "I learned to connect user research, competitive analysis, and emerging AI discovery mechanics into one cohesive product strategy. This project taught me that friction is a trust problem, especially for low-frequency users making high-stakes decisions."
+    },
+
+    matchpoint: {
+      title: "MatchPoint",
+      subtitle: "Campus Sports & Peer Discovery Platform",
+      role: "Founder & Product Manager",
+      date: "July 2026 – Present",
+      link: "https://matchpoint-sandy.vercel.app/"
     }
   };
 
@@ -225,211 +235,283 @@ export default function Projects() {
 
         {/* Project Selector */}
         <div className="project-tabs">
+
+          <button
+            className={`project-tab ${selectedProject === 'matchpoint' ? 'active' : ''}`}
+            onClick={() => setSelectedProject('matchpoint')}
+          >
+            MatchPoint
+          </button>
+
           <button
             className={`project-tab ${selectedProject === 'garderobe' ? 'active' : ''}`}
             onClick={() => setSelectedProject('garderobe')}
           >
             Garde-Robe
           </button>
+
           <button
             className={`project-tab ${selectedProject === 'toast' ? 'active' : ''}`}
             onClick={() => setSelectedProject('toast')}
           >
             Toast
           </button>
+
           <button
             className={`project-tab ${selectedProject === 'universieats' ? 'active' : ''}`}
             onClick={() => setSelectedProject('universieats')}
           >
             UniversiEats
           </button>
+
         </div>
 
         {/* Project Content */}
         <div className="project-content">
-          {/* Compact Header */}
-          <div className="project-header-compact">
-            <h2 className="project-main-title">{project.title}</h2>
-            <p className="project-subtitle-line">{project.subtitle}</p>
-            <div className="project-meta-line">
-              <span className="project-role-inline">{project.role}</span>
-              {project.context && (
-                <>
+
+          {selectedProject === 'matchpoint' ? (
+            <>
+              {/* MatchPoint Header */}
+              <div className="project-header-compact">
+                <h2 className="project-main-title">{project.title}</h2>
+
+                <p className="project-subtitle-line">
+                  {project.subtitle}
+                </p>
+
+                <div className="project-meta-line">
+                  <span className="project-role-inline">
+                    {project.role}
+                  </span>
+
                   <span className="meta-divider">|</span>
-                  <span className="project-context">{project.context}</span>
-                </>
-              )}
-              {project.date && (
-                <>
-                  <span className="meta-divider">|</span>
-                  <span className="project-date-inline">{project.date}</span>
-                </>
-              )}
-            </div>
-          </div>
 
-          {/* Tagline */}
-          <p className="project-tagline">{project.tagline}</p>
-
-          {/* Problem & Goal Grid */}
-          <div className="compact-grid">
-            <div className="compact-box">
-              <h3>Problem</h3>
-              <p>{project.problem}</p>
-            </div>
-            <div className="compact-box">
-              <h3>Goal</h3>
-              <p>{project.goal}</p>
-            </div>
-          </div>
-
-          {/* Strategy */}
-          <div className="compact-section">
-            <h3>Strategy</h3>
-            <p className="section-intro">{project.strategyIntro}</p>
-            <div className="strategy-compact">
-              <div className="strategy-header-row">
-                <div className="strategy-col-header">Focus Area</div>
-                <div className="strategy-col-header">Why It Matters</div>
+                  <span className="project-date-inline">
+                    {project.date}
+                  </span>
+                </div>
               </div>
-              {project.strategy.map((item, idx) => (
-                <div key={idx} className="strategy-data-row">
-                  <div className="strategy-cell-focus">{item.focus}</div>
-                  <div className="strategy-cell-why">{item.why}</div>
-                </div>
-              ))}
-            </div>
-            {project.strategyNote && <p className="section-note">{project.strategyNote}</p>}
-          </div>
 
-          {/* User Insights */}
-          <div className="compact-section">
-            <h3>User {selectedProject === 'garderobe' ? 'Research' : 'Interview'} Highlights</h3>
-            <ul className="compact-list">
-              {project.insights.map((insight, idx) => (
-                <li key={idx}>{insight}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Video + Features Layout */}
-          <div className="compact-section">
-            <h3>Key {selectedProject === 'garderobe' ? 'Initiatives' : 'Product Decisions'} & {selectedProject === 'toast' ? 'Execution' : 'Features'}</h3>
-            
-            {/* Toast: Full width video on top with 2x2 grid below */}
-            {selectedProject === 'toast' && project.video && (
-              <>
-                <div className="project-video-full">
-                  <video controls>
-                    <source src={project.video} type="video/quicktime" />
-                    <source src={project.video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+              {/* MatchPoint Coming Soon Message */}
+              <p className="project-tagline">
+                More information coming soon... Check out MatchPoint{" "}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  here
+                </a>
+                .
+              </p>
+            </>
+          ) : (
+            <>
+              {/* Compact Header */}
+              <div className="project-header-compact">
+                <h2 className="project-main-title">{project.title}</h2>
+                <p className="project-subtitle-line">{project.subtitle}</p>
+                <div className="project-meta-line">
+                  <span className="project-role-inline">{project.role}</span>
+                  {project.context && (
+                    <>
+                      <span className="meta-divider">|</span>
+                      <span className="project-context">{project.context}</span>
+                    </>
+                  )}
+                  {project.date && (
+                    <>
+                      <span className="meta-divider">|</span>
+                      <span className="project-date-inline">{project.date}</span>
+                    </>
+                  )}
                 </div>
-                <div className="features-grid-2x2">
-                  {project.features.map((feature, idx) => (
-                    <div key={idx} className="feature-compact">
-                      <h4>{feature.num}. {feature.title}</h4>
-                      <p>{feature.desc}</p>
-                      {feature.why && <p className="feature-why">{feature.why}</p>}
+              </div>
+
+              {/* Tagline */}
+              <p className="project-tagline">{project.tagline}</p>
+
+              {/* Problem & Goal Grid */}
+              <div className="compact-grid">
+                <div className="compact-box">
+                  <h3>Problem</h3>
+                  <p>{project.problem}</p>
+                </div>
+                <div className="compact-box">
+                  <h3>Goal</h3>
+                  <p>{project.goal}</p>
+                </div>
+              </div>
+
+              {/* Strategy */}
+              <div className="compact-section">
+                <h3>Strategy</h3>
+                <p className="section-intro">{project.strategyIntro}</p>
+                <div className="strategy-compact">
+                  <div className="strategy-header-row">
+                    <div className="strategy-col-header">Focus Area</div>
+                    <div className="strategy-col-header">Why It Matters</div>
+                  </div>
+                  {project.strategy.map((item, idx) => (
+                    <div key={idx} className="strategy-data-row">
+                      <div className="strategy-cell-focus">{item.focus}</div>
+                      <div className="strategy-cell-why">{item.why}</div>
                     </div>
                   ))}
                 </div>
-              </>
-            )}
-            
-            {/* UniversiEats: Video left, features right (side by side) */}
-            {selectedProject === 'universieats' && (
-              <div className="video-features-grid">
-                {project.video && (
-                  <div className="project-video-compact">
-                    <video controls>
-                      <source src={project.video} type="video/quicktime" />
-                      <source src={project.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                {project.strategyNote && (
+                  <p className="section-note">{project.strategyNote}</p>
+                )}
+              </div>
+
+              {/* User Insights */}
+              <div className="compact-section">
+                <h3>
+                  User {selectedProject === 'garderobe' ? 'Research' : 'Interview'} Highlights
+                </h3>
+                <ul className="compact-list">
+                  {project.insights.map((insight, idx) => (
+                    <li key={idx}>{insight}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Video + Features Layout */}
+              <div className="compact-section">
+                <h3>
+                  Key {selectedProject === 'garderobe' ? 'Initiatives' : 'Product Decisions'} & {selectedProject === 'toast' ? 'Execution' : 'Features'}
+                </h3>
+
+                {/* Toast: Full width video on top with 2x2 grid below */}
+                {selectedProject === 'toast' && project.video && (
+                  <>
+                    <div className="project-video-full">
+                      <video controls>
+                        <source src={project.video} type="video/quicktime" />
+                        <source src={project.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+
+                    <div className="features-grid-2x2">
+                      {project.features.map((feature, idx) => (
+                        <div key={idx} className="feature-compact">
+                          <h4>{feature.num}. {feature.title}</h4>
+                          <p>{feature.desc}</p>
+                          {feature.why && (
+                            <p className="feature-why">{feature.why}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {/* UniversiEats: Video left, features right */}
+                {selectedProject === 'universieats' && (
+                  <div className="video-features-grid">
+                    {project.video && (
+                      <div className="project-video-compact">
+                        <video controls>
+                          <source src={project.video} type="video/quicktime" />
+                          <source src={project.video} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    )}
+
+                    <div className="features-compact">
+                      {project.features.map((feature, idx) => (
+                        <div key={idx} className="feature-compact">
+                          <h4>{feature.num}. {feature.title}</h4>
+                          <p>{feature.desc}</p>
+                          {feature.why && (
+                            <p className="feature-why">{feature.why}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 )}
-                <div className="features-compact">
-                  {project.features.map((feature, idx) => (
-                    <div key={idx} className="feature-compact">
-                      <h4>{feature.num}. {feature.title}</h4>
-                      <p>{feature.desc}</p>
-                      {feature.why && <p className="feature-why">{feature.why}</p>}
+
+                {/* Garde-Robe: No video, just features in vertical list */}
+                {selectedProject === 'garderobe' && (
+                  <div className="features-compact">
+                    {project.features.map((feature, idx) => (
+                      <div key={idx} className="feature-compact">
+                        <h4>{feature.num}. {feature.title}</h4>
+                        <p>{feature.desc}</p>
+                        {feature.why && (
+                          <p className="feature-why">{feature.why}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* User Journey Roadmap - only for UniversiEats */}
+              {project.userJourney && (
+                <div className="compact-section">
+                  <h3>User Journey Roadmap</h3>
+                  <div className="journey-flow">
+                    {project.userJourney.map((step, idx) => (
+                      <React.Fragment key={idx}>
+                        <div className="journey-step">{step}</div>
+                        {idx < project.userJourney.length - 1 && (
+                          <div className="journey-arrow">→</div>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                  {project.journeyNote && (
+                    <p className="section-note journey-note">
+                      {project.journeyNote}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {/* KPIs */}
+              {project.kpis && (
+                <div className="compact-section">
+                  <h3>KPIs & Impact</h3>
+                  <div className="kpis-table">
+                    <div className="kpis-header-row">
+                      <div>Experiment</div>
+                      <div>Metric</div>
+                      <div>Goal</div>
                     </div>
+
+                    {project.kpis.map((kpi, idx) => (
+                      <div key={idx} className="kpis-data-row">
+                        <div>{kpi.experiment}</div>
+                        <div>{kpi.metric}</div>
+                        <div>{kpi.goal}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Outcomes */}
+              <div className="compact-section">
+                <h3>Outcomes</h3>
+                <ul className="compact-list">
+                  {project.outcomes.map((outcome, idx) => (
+                    <li key={idx}>{outcome}</li>
                   ))}
-                </div>
+                </ul>
               </div>
-            )}
-            
-            {/* Garde-Robe: No video, just features in vertical list */}
-            {selectedProject === 'garderobe' && (
-              <div className="features-compact">
-                {project.features.map((feature, idx) => (
-                  <div key={idx} className="feature-compact">
-                    <h4>{feature.num}. {feature.title}</h4>
-                    <p>{feature.desc}</p>
-                    {feature.why && <p className="feature-why">{feature.why}</p>}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
 
-          {/* User Journey Roadmap - only for UniversiEats */}
-          {project.userJourney && (
-            <div className="compact-section">
-              <h3>User Journey Roadmap</h3>
-              <div className="journey-flow">
-                {project.userJourney.map((step, idx) => (
-                  <React.Fragment key={idx}>
-                    <div className="journey-step">{step}</div>
-                    {idx < project.userJourney.length - 1 && (
-                      <div className="journey-arrow">→</div>
-                    )}
-                  </React.Fragment>
-                ))}
+              {/* Reflection */}
+              <div className="compact-section reflection">
+                <h3>Reflection</h3>
+                <p>{project.reflection}</p>
               </div>
-              {project.journeyNote && <p className="section-note journey-note">{project.journeyNote}</p>}
-            </div>
+            </>
           )}
 
-          {/* KPIs */}
-          {project.kpis && (
-            <div className="compact-section">
-              <h3>KPIs & Impact</h3>
-              <div className="kpis-table">
-                <div className="kpis-header-row">
-                  <div>Experiment</div>
-                  <div>Metric</div>
-                  <div>Goal</div>
-                </div>
-                {project.kpis.map((kpi, idx) => (
-                  <div key={idx} className="kpis-data-row">
-                    <div>{kpi.experiment}</div>
-                    <div>{kpi.metric}</div>
-                    <div>{kpi.goal}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Outcomes */}
-          <div className="compact-section">
-            <h3>Outcomes</h3>
-            <ul className="compact-list">
-              {project.outcomes.map((outcome, idx) => (
-                <li key={idx}>{outcome}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Reflection */}
-          <div className="compact-section reflection">
-            <h3>Reflection</h3>
-            <p>{project.reflection}</p>
-          </div>
         </div>
       </div>
     </div>
