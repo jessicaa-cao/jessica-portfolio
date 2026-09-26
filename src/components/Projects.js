@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PixelIcon from './PixelIcon';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState('garderobe');
@@ -237,28 +238,28 @@ export default function Projects() {
         <div className="project-tabs">
 
           <button
-            className={`project-tab ${selectedProject === 'matchpoint' ? 'active' : ''}`}
+            className={`px-btn px-btn--sm project-tab ${selectedProject === 'matchpoint' ? 'is-pressed' : ''}`}
             onClick={() => setSelectedProject('matchpoint')}
           >
             MatchPoint
           </button>
 
           <button
-            className={`project-tab ${selectedProject === 'garderobe' ? 'active' : ''}`}
+            className={`px-btn px-btn--sm project-tab ${selectedProject === 'garderobe' ? 'is-pressed' : ''}`}
             onClick={() => setSelectedProject('garderobe')}
           >
             Garde-Robe
           </button>
 
           <button
-            className={`project-tab ${selectedProject === 'toast' ? 'active' : ''}`}
+            className={`px-btn px-btn--sm project-tab ${selectedProject === 'toast' ? 'is-pressed' : ''}`}
             onClick={() => setSelectedProject('toast')}
           >
             Toast
           </button>
 
           <button
-            className={`project-tab ${selectedProject === 'universieats' ? 'active' : ''}`}
+            className={`px-btn px-btn--sm project-tab ${selectedProject === 'universieats' ? 'is-pressed' : ''}`}
             onClick={() => setSelectedProject('universieats')}
           >
             UniversiEats
@@ -459,7 +460,7 @@ export default function Projects() {
                       <React.Fragment key={idx}>
                         <div className="journey-step">{step}</div>
                         {idx < project.userJourney.length - 1 && (
-                          <div className="journey-arrow">→</div>
+                          <div className="journey-arrow" aria-hidden="true"><PixelIcon name="right" size={2} /></div>
                         )}
                       </React.Fragment>
                     ))}

@@ -1,54 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import TitleScreen from './components/TitleScreen';
 import Home from './components/Home';
+import Nav from './components/Nav';
 import About from './components/About';
 import Work from './components/Work';
 import Projects from './components/Projects';
 import './App.css';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+const reduceMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const pages = {
-    home: <Home setPage={setCurrentPage} />,
-    about: <About />,
-    work: <Work />,
-    projects: <Projects />
+function App() {
+  const [currentPage, setCurrentPage] = useState('title');
+  const [wipe, setWipe] = useState(false);
+
+  // Screen change with a short stepped "level load" fade
+  const goTo = (page) => {
+    if (page === currentPage) return;
+    if (reduceMotion()) {
+      setCurrentPage(page);
+      return;
+    }
+    setWipe(true);
+    setTimeout(() => {
+      setCurrentPage(page);
+      setTimeout(() => setWipe(false), 60);
+    }, 260);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  const pages = {
+    title: <TitleScreen onExplore={() => goTo('home')} />,
+    home: <Home setPage={goTo} />,
+    about: <About />,
+    work: <Work />,
+    projects: <Projects />,
+  };
+
+  const isContent = !['title', 'home'].includes(currentPage);
+
   return (
-    <div className="app">
-      {currentPage !== 'home' && (
-        <nav className="nav">
-          <button onClick={() => setCurrentPage('home')} className="nav-name">
-            Jessica Cao
-          </button>
-          <div className="nav-links">
-            <button 
-              onClick={() => setCurrentPage('about')}
-              className={currentPage === 'about' ? 'active' : ''}
-            >
-              About
-            </button>
-            <button 
-              onClick={() => setCurrentPage('work')}
-              className={currentPage === 'work' ? 'active' : ''}
-            >
-              Work
-            </button>
-            <button 
-              onClick={() => setCurrentPage('projects')}
-              className={currentPage === 'projects' ? 'active' : ''}
-            >
-              Projects
-            </button>
-          </div>
-        </nav>
-      )}
-      
-      <main className={currentPage === 'home' ? 'main-home' : 'main-page'}>
+    <div className={`app app--${currentPage}`}>
+      {isContent && <div className="day-backdrop" aria-hidden="true" />}
+      {isContent && <Nav currentPage={currentPage} setPage={goTo} />}
+
+      <main className={isContent ? 'main-page' : 'main-screen'}>
         {pages[currentPage]}
       </main>
+
+      <div className={`wipe ${wipe ? 'on' : ''}`} aria-hidden="true" />
       <Analytics />
     </div>
   );
