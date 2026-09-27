@@ -23,7 +23,7 @@ export default function About() {
           <div className="dialog panel">
             <div className="about-paragraphs">
   <p className="about-text">
-    Hi! I'm Jessica, a <L href="https://sfs.georgetown.edu/">Georgetown</L> student studying Science, Tech &amp; International Affairs with a minor in CS. I build products and the policy around them, and I've found each side makes me better at the other.
+    Hi! I'm Jessica, a <L href="https://sfs.georgetown.edu/">Georgetown</L> student studying Science, Tech &amp; International Affairs with a minor in CS.
   </p>
 
   <p className="about-text">
