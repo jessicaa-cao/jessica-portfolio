@@ -13,15 +13,6 @@ export default function Work() {
     },
     {
       id: 2,
-      company: "GovSkills",
-      url: "https://govskills.io/",
-      logo: "/logos/govskills.jpg",
-      period: "Jan '26 – May '26",
-      position: "Product Consultant",
-      focus: "User Research & University GTM Strategy"
-    },
-    {
-      id: 3,
       company: "Garde-Robe",
       url: "https://www.garde-robe.com/",
       logo: "/logos/garderobe.png",
@@ -30,7 +21,25 @@ export default function Work() {
       focus: "Consumer Growth & Onboarding"
     },
     {
+      id: 3,
+      company: "GovSkills",
+      url: "https://govskills.io/",
+      logo: "/logos/govskills.jpg",
+      period: "Jan '26 – May '26",
+      position: "Product Consultant",
+      focus: "User Research & University GTM Strategy"
+    },
+    {
       id: 4,
+      company: "House of Representatives",
+      url: "https://www.house.gov/",
+      logo: "/logos/house.png",
+      period: "Jan '26 – May '26",
+      position: "Legislative Assistant",
+      focus: "Tech Policy & AI Governance"
+    },
+    {
+      id: 5,
       company: "Toast",
       url: "https://pos.toasttab.com/",
       logo: "/logos/toast.jpg",
@@ -39,22 +48,13 @@ export default function Work() {
       focus: "UX Diagnostics & Competitive Strategy"
     },
     {
-      id: 5,
+      id: 6,
       company: "SFS",
       url: "https://sfs.georgetown.edu/",
       logo: "/logos/sfs.png",
       period: "Mar '25 – Dec '25",
       position: "Web Developer Intern",
       focus: "Platform Performance & Information Architecture"
-    },
-    {
-      id: 6,
-      company: "EIN Presswire",
-      url: "https://www.einpresswire.com/",
-      logo: "/logos/ein.jpg",
-      period: "Jan '25 – May '25",
-      position: "Data Analyst Intern",
-      focus: "Sales Analytics & Ad Strategy"
     }
   ];
 
