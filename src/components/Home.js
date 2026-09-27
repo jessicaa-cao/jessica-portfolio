@@ -32,7 +32,6 @@ export default function Home({ setPage }) {
       <div className="menu-content">
         <header className="menu-header">
           <h1 className="menu-name">Jessica Cao</h1>
-          <p className="menu-tagline">I'm a people-first builder &amp; problem solver.</p>
         </header>
 
         <nav className="menu-list" aria-label="Main menu">
