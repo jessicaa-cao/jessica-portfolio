@@ -1,5 +1,4 @@
 import React from 'react';
-import PixelIcon from './PixelIcon';
 
 export default function About() {
   const L = ({ href, children }) => (
@@ -38,7 +37,6 @@ export default function About() {
     Beyond work, you'll find me acting on stage, mountain biking, writing <L href="https://sites.google.com/view/staytruetoyourshelf/home">screenplays</L>, or <L href="https://beliapp.com/">Beli</L>-hopping every city I visit. Currently, I'm learning to 3D print a telescope, inspired by my annual trip to view the Perseid Meteor Showers with friends in California!
   </p>
 </div>
-            <span className="dialog-more" aria-hidden="true"><PixelIcon name="down" size={2} /></span>
           </div>
         </div>
       </div>

@@ -311,8 +311,7 @@ img { display: block; }
 }
 .player-meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.3rem; }
 
-.dialog { position: relative; padding-bottom: 2rem; }
-.about-text {
+   .dialog { position: relative; }.about-text {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 64ch;
